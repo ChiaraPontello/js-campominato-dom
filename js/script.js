@@ -3,20 +3,7 @@ const btn = document.querySelector('button');
 //quadrati al click
 btn.addEventListener('click',function(){
     const level = document.getElementById('level').value;
-//grigie diverse per ogni livello
-let numSquare;
-switch(level){
-    case 'medio':
-        numSquare = 81;
-        break;
-    case 'difficile':
-        numSquare = 49;
-        break;
-    default:
-        numSquare = 100;
-console.log(numSquare);
-}
-
+    let numSquare = selectLevel(level);
 //griglia + stampo quadrati
     const playground = document.getElementById('playground');
     playground.innerHTML = '';
@@ -41,4 +28,22 @@ function drawSquare(squareIndex, numSquare){
         console.log(square.textContent);
     });
     return square;
+}
+
+
+//funzione grigie diverse per ogni livello
+function selectLevel(level){
+    let numSquare;
+    switch(level){
+        case 'medio':
+            numSquare = 81;
+            break;
+        case 'difficile':
+            numSquare = 49;
+            break;
+        default:
+            numSquare = 100;
+
+    }
+    return numSquare;
 }
