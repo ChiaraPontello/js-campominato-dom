@@ -17,11 +17,12 @@ switch(level){
 console.log(numSquare);
 }
 
+//griglia + stampo quadrati
     const playground = document.getElementById('playground');
     playground.innerHTML = '';
     for(let i = 0; i < numSquare; i++){
         let square = drawSquare(i,numSquare);
-        console.log(square);
+        
         playground.append(square);
     }
 });
@@ -37,6 +38,7 @@ function drawSquare(squareIndex, numSquare){
     square.addEventListener('click', function(){
         square.classList.add('active');
         square.style.color = 'black';
+        console.log(square.textContent);
     });
     return square;
 }
