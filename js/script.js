@@ -2,7 +2,12 @@ const btn = document.querySelector('button');
 btn.addEventListener("click", play);
 //play
 function play(){
-    
+    const NUM_BOMBS = 16;
+    const bombs = []; //array bombe
+    const level = document.getElementById('level').value;
+
+
+
 }
 
 
