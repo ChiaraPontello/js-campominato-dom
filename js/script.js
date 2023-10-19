@@ -1,4 +1,10 @@
 const btn = document.querySelector('button');
+btn.addEventListener("click", play);
+//play
+function play(){
+    
+}
+
 
 //quadrati al click
 btn.addEventListener('click',function(){
@@ -29,6 +35,7 @@ function drawSquare(squareIndex, numSquare){
     });
     return square;
 }
+
 
 
 //funzione grigie diverse per ogni livello
