@@ -25,3 +25,12 @@ button{
 .active{
     background-color: aqua;
 }
+
+.form-label {
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
