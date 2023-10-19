@@ -2,8 +2,21 @@ const btn = document.querySelector('button');
 
 //quadrati al click
 btn.addEventListener('click',function(){
-    const numSquare = 64;
-//griglia
+    const level = document.getElementById('level').value;
+//grigie diverse per ogni livello
+let numSquare;
+switch(level){
+    case 'medio':
+        numSquare = 81;
+        break;
+    case 'difficile':
+        numSquare = 49;
+        break;
+    default:
+        numSquare = 100;
+console.log(numSquare);
+}
+
     const playground = document.getElementById('playground');
     playground.innerHTML = '';
     for(let i = 0; i < numSquare; i++){
